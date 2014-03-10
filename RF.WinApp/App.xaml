@@ -1,0 +1,19 @@
+﻿<Application x:Class="RF.WinApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vc="clr-namespace:RF.WinApp">
+    <!--StartupUri="MainWindow.xaml"-->
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/RF.WinApp;component/Themes/MainTheme.xaml"/>
+                <!--<ResourceDictionary Source="/RF.WinApp;component/Themes/CrudCCLookup.xaml"/>-->
+                <!--<ResourceDictionary Source="pack://application:,,,/RF.WinApp.Themes.T1;component/Themes/generic.xaml"/>-->
+                <ResourceDictionary Source="{ThemeDictionary RF.WinApp.Infrastructure}"/>
+                <!--<ResourceDictionary Source="/RF.WinApp;component/Themes/generic.xaml"/>-->
+                <!--<ResourceDictionary Source="{ThemeDictionary RF.WinApp.Themes.T1}"/>-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

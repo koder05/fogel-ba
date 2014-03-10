@@ -1,0 +1,14 @@
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\RF.BL.EF.dll
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\RF.BL.EF.pdb
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\AutoMapper.dll
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\EF.dll
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\EntityFramework.dll
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\RF.Bl.dll
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\RF.Common.dll
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\EF.pdb
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\RF.Bl.pdb
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\RF.Common.pdb
+D:\Projects\RF.WebApp\RF.BL.EF\bin\Release\EntityFramework.xml
+D:\Projects\RF.WebApp\RF.BL.EF\obj\Release\RF.BL.EF.dll
+D:\Projects\RF.WebApp\RF.BL.EF\obj\Release\RF.BL.EF.pdb
+D:\Projects\RF.WebApp\RF.BL.EF\obj\Release\RF.BL.EF.csprojResolveAssemblyReference.cache

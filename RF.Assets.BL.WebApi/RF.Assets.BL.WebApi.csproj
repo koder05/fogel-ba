@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D1ECBCE-04FC-4787-B6E0-F3C5299320D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RF.Assets.BL.WebApi</RootNamespace>
+    <AssemblyName>RF.Assets.BL.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\RF.WebApp\Lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.2.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DtoProxy\AssetValueProxy.cs" />
+    <Compile Include="DtoProxy\CompanyProxy.cs" />
+    <Compile Include="DtoProxy\GovernorProxy.cs" />
+    <Compile Include="DtoProxy\WorkCalendarProxy.cs" />
+    <Compile Include="Mapping\Model2DtoMapper.cs" />
+    <Compile Include="Repositories\AssetsRepository.cs" />
+    <Compile Include="Repositories\GovernorRepository.cs" />
+    <Compile Include="DtoProxy\IDtoProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DtoProxy\ProxyActivator.cs" />
+    <Compile Include="Repositories\WorkcalendarRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RF.WebApp\RF.Bl\RF.BL.csproj">
+      <Project>{ED31916C-CAB3-48DA-8D92-F9773D25764F}</Project>
+      <Name>RF.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RF.WebApp\RF.Common\RF.Common.csproj">
+      <Project>{8BD5559D-FE14-44E0-8015-FC989CA64E5F}</Project>
+      <Name>RF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.Assets.BL\RF.Assets.BL.csproj">
+      <Project>{4F060531-C863-4B36-ACA0-BCAD2527B04A}</Project>
+      <Name>RF.Assets.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.Excel\RF.Excel.csproj">
+      <Project>{54354D6A-2C09-416D-AED5-AB022FF39FB8}</Project>
+      <Name>RF.Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.LinqExt\RF.LinqExt.csproj">
+      <Project>{C3E5C837-C02A-4E30-9D5B-7C95DB3264D9}</Project>
+      <Name>RF.LinqExt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.Reporting\RF.Reporting.csproj">
+      <Project>{D8D21360-F665-42F3-8FB2-C0D0D0ACAAE4}</Project>
+      <Name>RF.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi\WebApi.csproj">
+      <Project>{00A5CB54-D61D-47F4-8E16-5EFCF0CB19A6}</Project>
+      <Name>WebApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

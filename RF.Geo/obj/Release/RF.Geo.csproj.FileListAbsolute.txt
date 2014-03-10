@@ -1,0 +1,11 @@
+D:\Projects\RF.WinApp\RF.Geo\bin\Release\RF.Geo.dll
+D:\Projects\RF.WinApp\RF.Geo\bin\Release\RF.Geo.pdb
+D:\Projects\RF.WinApp\RF.Geo\bin\Release\RF.Bl.dll
+D:\Projects\RF.WinApp\RF.Geo\bin\Release\RF.Common.dll
+D:\Projects\RF.WinApp\RF.Geo\bin\Release\RF.LinqExt.dll
+D:\Projects\RF.WinApp\RF.Geo\bin\Release\RF.Bl.pdb
+D:\Projects\RF.WinApp\RF.Geo\bin\Release\RF.Common.pdb
+D:\Projects\RF.WinApp\RF.Geo\bin\Release\RF.LinqExt.pdb
+D:\Projects\RF.WinApp\RF.Geo\obj\Release\RF.Geo.dll
+D:\Projects\RF.WinApp\RF.Geo\obj\Release\RF.Geo.pdb
+D:\Projects\RF.WinApp\RF.Geo\obj\Release\RF.Geo.csprojResolveAssemblyReference.cache

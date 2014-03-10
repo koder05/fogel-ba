@@ -1,0 +1,4 @@
+D:\Projects\RF.WinApp\RF.LinqExt\bin\Release\RF.LinqExt.dll
+D:\Projects\RF.WinApp\RF.LinqExt\bin\Release\RF.LinqExt.pdb
+D:\Projects\RF.WinApp\RF.LinqExt\obj\Release\RF.LinqExt.dll
+D:\Projects\RF.WinApp\RF.LinqExt\obj\Release\RF.LinqExt.pdb

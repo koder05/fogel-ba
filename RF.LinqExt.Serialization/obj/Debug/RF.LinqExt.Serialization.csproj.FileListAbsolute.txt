@@ -1,0 +1,9 @@
+D:\Projects\RF.WinApp\RF.LinqExt.Serialization\bin\Debug\RF.LinqExt.Serialization.dll
+D:\Projects\RF.WinApp\RF.LinqExt.Serialization\bin\Debug\RF.LinqExt.Serialization.pdb
+D:\Projects\RF.WinApp\RF.LinqExt.Serialization\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\RF.WinApp\RF.LinqExt.Serialization\bin\Debug\RF.LinqExt.dll
+D:\Projects\RF.WinApp\RF.LinqExt.Serialization\bin\Debug\RF.LinqExt.pdb
+D:\Projects\RF.WinApp\RF.LinqExt.Serialization\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\RF.WinApp\RF.LinqExt.Serialization\obj\Debug\RF.LinqExt.Serialization.dll
+D:\Projects\RF.WinApp\RF.LinqExt.Serialization\obj\Debug\RF.LinqExt.Serialization.pdb
+D:\Projects\RF.WinApp\RF.LinqExt.Serialization\obj\Debug\RF.LinqExt.Serialization.csprojResolveAssemblyReference.cache

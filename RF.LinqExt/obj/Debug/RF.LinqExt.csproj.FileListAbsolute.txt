@@ -1,0 +1,5 @@
+D:\Projects\RF.WinApp\RF.LinqExt\bin\Debug\RF.LinqExt.dll
+D:\Projects\RF.WinApp\RF.LinqExt\bin\Debug\RF.LinqExt.pdb
+D:\Projects\RF.WinApp\RF.LinqExt\obj\Debug\RF.LinqExt.dll
+D:\Projects\RF.WinApp\RF.LinqExt\obj\Debug\RF.LinqExt.pdb
+D:\Projects\RF.WinApp\RF.LinqExt\obj\Debug\RF.LinqExt.csprojResolveAssemblyReference.cache

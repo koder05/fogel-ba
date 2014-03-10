@@ -1,0 +1,9 @@
+D:\Projects\RF.WebApp\EF\bin\Release\EF.dll
+D:\Projects\RF.WebApp\EF\bin\Release\EF.pdb
+D:\Projects\RF.WebApp\EF\bin\Release\EntityFramework.dll
+D:\Projects\RF.WebApp\EF\bin\Release\RF.Common.dll
+D:\Projects\RF.WebApp\EF\bin\Release\RF.Common.pdb
+D:\Projects\RF.WebApp\EF\bin\Release\EntityFramework.xml
+D:\Projects\RF.WebApp\EF\obj\Release\EF.dll
+D:\Projects\RF.WebApp\EF\obj\Release\EF.pdb
+D:\Projects\RF.WebApp\EF\obj\Release\EF.csprojResolveAssemblyReference.cache

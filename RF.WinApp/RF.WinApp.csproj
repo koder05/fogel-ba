@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F73A6B8C-081E-4D5A-B558-8FE08821B6ED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RF.WinApp</RootNamespace>
+    <AssemblyName>RF.WinApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions">
+      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.MefExtensions">
+      <HintPath>..\packages\Prism.MEFExtensions.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.MefExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>..\..\RF.WebApp\Lib\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ConfigurationStoreNetShared.cs" />
+    <Compile Include="ViewModel\ErrorOverdoorBehavior.cs" />
+    <Compile Include="ViewModel\IModalView.cs" />
+    <Compile Include="ViewModel\WaitOverdoorBehavior.cs" />
+    <Compile Include="Views\LogonProvider.cs" />
+    <Compile Include="Prism4MefBootstapper.cs" />
+    <Compile Include="Themes\CrudCCLookup.xaml.cs">
+      <DependentUpon>CrudCCLookup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\HomeNavigatorModel.cs" />
+    <Compile Include="ViewModel\LogonModel.cs" />
+    <Compile Include="ViewModel\ShellWindowModel.cs" />
+    <Compile Include="Views\HomeMenu.xaml.cs">
+      <DependentUpon>HomeMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogonView.xaml.cs">
+      <DependentUpon>LogonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellWindow.xaml.cs">
+      <DependentUpon>ShellWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InNetworkIconConverter.cs" />
+    <Page Include="Themes\CrudCCLookup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MainTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Menus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HomeMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LogonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\modules_view_grid_header_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RF.WebApp\Ms.Unity.2\Ms.Unity.2.csproj">
+      <Project>{3AD767E6-3E66-4AF9-8008-09930D245510}</Project>
+      <Name>Ms.Unity.2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RF.WebApp\RF.Common\RF.Common.csproj">
+      <Project>{8BD5559D-FE14-44E0-8015-FC989CA64E5F}</Project>
+      <Name>RF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.WinApp.Infrastructure\RF.WinApp.Infrastructure.csproj">
+      <Project>{BC1E9F72-1568-4507-9F7B-9C498BE121AB}</Project>
+      <Name>RF.WinApp.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\error.png" />
+    <Resource Include="Img\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\application-form-add-icon.png" />
+    <Resource Include="Img\application-form-edit-icon.png" />
+    <Resource Include="Img\application-form-icon.png" />
+    <Resource Include="Img\cancel-icon.png" />
+    <Resource Include="Img\close-delete-2-icon.png" />
+    <Resource Include="Img\cross-script-icon.png" />
+    <Resource Include="Img\delete-2-icon.png" />
+    <Resource Include="Img\Pen-icon.png" />
+    <Resource Include="Img\Pencil-2-icon.png" />
+    <Resource Include="Img\pencil-add-icon.png" />
+    <Resource Include="Img\pencil-delete-icon.png" />
+    <Resource Include="Img\pencil-edit-icon.png" />
+    <Resource Include="Img\pencil-go-icon.png" />
+    <Resource Include="Img\Pencil-icon %281%29.png" />
+    <Resource Include="Img\pencil-icon.png" />
+    <Resource Include="Img\Window-Generic-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\indicator_mozilla_blu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\progressbar_green.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\bar-circle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\squar-circle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\birdicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\application_tile_horizontal.png" />
+    <Resource Include="Img\application_view_tile.png" />
+    <Resource Include="Img\tab_new.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(SolutionDir)\RF.WinApp.Geo\bin\$(ConfigurationName)\*.* $(SolutionDir)\$(ProjectName)\$(OutDir) /Y
+xcopy $(SolutionDir)\RF.WinApp.Assets\bin\$(ConfigurationName)\*.* $(SolutionDir)\$(ProjectName)\$(OutDir) /Y
+xcopy $(SolutionDir)\RF.Assets.BL.EF\bin\$(ConfigurationName)\*.* $(SolutionDir)\$(ProjectName)\$(OutDir) /Y
+xcopy $(SolutionDir)\RF.Assets.BL.WebApi\bin\$(ConfigurationName)\*.* $(SolutionDir)\$(ProjectName)\$(OutDir) /Y
+xcopy $(SolutionDir)\RF.WinApp.Themes.T1\bin\$(ConfigurationName)\*.* $(SolutionDir)\$(ProjectName)\$(OutDir) /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

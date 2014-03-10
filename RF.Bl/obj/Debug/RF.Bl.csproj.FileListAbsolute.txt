@@ -1,0 +1,14 @@
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Bl\bin\Debug\RF.Bl.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Bl\bin\Debug\RF.Bl.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Bl\bin\Debug\RF.Common.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Bl\bin\Debug\RF.Common.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Bl\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Bl\obj\Debug\RF.Bl.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Bl\obj\Debug\RF.Bl.pdb
+D:\Projects\RF.WebApp\RF.Bl\bin\Debug\RF.Bl.dll
+D:\Projects\RF.WebApp\RF.Bl\bin\Debug\RF.Bl.pdb
+D:\Projects\RF.WebApp\RF.Bl\bin\Debug\RF.Common.dll
+D:\Projects\RF.WebApp\RF.Bl\bin\Debug\RF.Common.pdb
+D:\Projects\RF.WebApp\RF.Bl\obj\Debug\RF.Bl.dll
+D:\Projects\RF.WebApp\RF.Bl\obj\Debug\RF.Bl.pdb
+D:\Projects\RF.WebApp\RF.Bl\obj\Debug\RF.BL.csprojResolveAssemblyReference.cache

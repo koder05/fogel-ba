@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B8ACC4F-7764-4786-9EC9-F7B631808297}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RF.Assets.BL.EF</RootNamespace>
+    <AssemblyName>RF.Assets.BL.EF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\RF.WebApp\Lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssetsEFCtx.cs" />
+    <Compile Include="AssetsRepository.cs" />
+    <Compile Include="EFImplicitTransaction.cs" />
+    <Compile Include="GovernorRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkcalendarRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RF.WebApp\EF\EF.csproj">
+      <Project>{D0C9C756-2E28-4691-8E4C-7E28728FA4B2}</Project>
+      <Name>EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RF.WebApp\RF.BL.EF\RF.BL.EF.csproj">
+      <Project>{D636539B-11EB-42F3-9E29-882719AC27D7}</Project>
+      <Name>RF.BL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RF.WebApp\RF.Bl\RF.BL.csproj">
+      <Project>{ED31916C-CAB3-48DA-8D92-F9773D25764F}</Project>
+      <Name>RF.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RF.WebApp\RF.Common\RF.Common.csproj">
+      <Project>{8BD5559D-FE14-44E0-8015-FC989CA64E5F}</Project>
+      <Name>RF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EF.Sql\EF.Sql.csproj">
+      <Project>{8F57C465-95E2-4AD9-AF85-C5724F9B03E4}</Project>
+      <Name>EF.Sql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.Assets.BL\RF.Assets.BL.csproj">
+      <Project>{4F060531-C863-4B36-ACA0-BCAD2527B04A}</Project>
+      <Name>RF.Assets.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.Excel\RF.Excel.csproj">
+      <Project>{54354D6A-2C09-416D-AED5-AB022FF39FB8}</Project>
+      <Name>RF.Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.LinqExt\RF.LinqExt.csproj">
+      <Project>{C3E5C837-C02A-4E30-9D5B-7C95DB3264D9}</Project>
+      <Name>RF.LinqExt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.Reporting\RF.Reporting.csproj">
+      <Project>{D8D21360-F665-42F3-8FB2-C0D0D0ACAAE4}</Project>
+      <Name>RF.Reporting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

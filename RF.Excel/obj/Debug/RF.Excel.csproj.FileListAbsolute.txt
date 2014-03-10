@@ -1,0 +1,4 @@
+D:\Projects\RF.WinApp\RF.Excel\bin\Debug\RF.Excel.dll
+D:\Projects\RF.WinApp\RF.Excel\bin\Debug\RF.Excel.pdb
+D:\Projects\RF.WinApp\RF.Excel\obj\Debug\RF.Excel.dll
+D:\Projects\RF.WinApp\RF.Excel\obj\Debug\RF.Excel.pdb

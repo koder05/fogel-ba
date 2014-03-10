@@ -1,0 +1,13 @@
+D:\Projects\RF.WinApp\EF.Sql\bin\Release\EF.Sql.dll
+D:\Projects\RF.WinApp\EF.Sql\bin\Release\EF.Sql.pdb
+D:\Projects\RF.WinApp\EF.Sql\bin\Release\EF.dll
+D:\Projects\RF.WinApp\EF.Sql\bin\Release\EntityFramework.dll
+D:\Projects\RF.WinApp\EF.Sql\bin\Release\RF.LinqExt.dll
+D:\Projects\RF.WinApp\EF.Sql\bin\Release\RF.Common.dll
+D:\Projects\RF.WinApp\EF.Sql\bin\Release\EF.pdb
+D:\Projects\RF.WinApp\EF.Sql\bin\Release\RF.LinqExt.pdb
+D:\Projects\RF.WinApp\EF.Sql\bin\Release\EntityFramework.xml
+D:\Projects\RF.WinApp\EF.Sql\bin\Release\RF.Common.pdb
+D:\Projects\RF.WinApp\EF.Sql\obj\Release\EF.Sql.dll
+D:\Projects\RF.WinApp\EF.Sql\obj\Release\EF.Sql.pdb
+D:\Projects\RF.WinApp\EF.Sql\obj\Release\EF.Sql.csprojResolveAssemblyReference.cache

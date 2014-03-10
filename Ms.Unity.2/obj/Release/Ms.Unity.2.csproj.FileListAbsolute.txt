@@ -1,0 +1,14 @@
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\Ms.Unity.2.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\Ms.Unity.2.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\Microsoft.Practices.Unity.Configuration.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\Microsoft.Practices.Unity.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\RF.Common.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\RF.Common.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\Microsoft.Practices.Unity.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\Microsoft.Practices.Unity.xml
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\Microsoft.Practices.Unity.Configuration.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Release\Microsoft.Practices.Unity.Configuration.xml
+D:\Projects\RF.WebApp\Ms.Unity.2\obj\Release\Ms.Unity.2.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\obj\Release\Ms.Unity.2.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\obj\Release\Ms.Unity.2.csprojResolveAssemblyReference.cache

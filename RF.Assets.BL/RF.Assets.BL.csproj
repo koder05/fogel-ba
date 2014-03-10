@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F060531-C863-4B36-ACA0-BCAD2527B04A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RF.Assets.BL</RootNamespace>
+    <AssemblyName>RF.Assets.BL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssetsPropResolver.cs" />
+    <Compile Include="AssetValue.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="Excel\AssetsCashXlsObject.cs" />
+    <Compile Include="Excel\AssetsValXlsObject.cs" />
+    <Compile Include="Governor.cs" />
+    <Compile Include="WorkcalendarSqlOpResolver.cs" />
+    <Compile Include="IAssetsRepository.cs" />
+    <Compile Include="IGovernorRepository.cs" />
+    <Compile Include="InsuranceType.cs" />
+    <Compile Include="IWorkcalendarRepository.cs" />
+    <Compile Include="LawFormType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkCalendar.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RF.WebApp\RF.Bl\RF.BL.csproj">
+      <Project>{ED31916C-CAB3-48DA-8D92-F9773D25764F}</Project>
+      <Name>RF.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RF.WebApp\RF.Common\RF.Common.csproj">
+      <Project>{8BD5559D-FE14-44E0-8015-FC989CA64E5F}</Project>
+      <Name>RF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.Excel\RF.Excel.csproj">
+      <Project>{54354D6A-2C09-416D-AED5-AB022FF39FB8}</Project>
+      <Name>RF.Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.LinqExt\RF.LinqExt.csproj">
+      <Project>{C3E5C837-C02A-4E30-9D5B-7C95DB3264D9}</Project>
+      <Name>RF.LinqExt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RF.Reporting\RF.Reporting.csproj">
+      <Project>{D8D21360-F665-42F3-8FB2-C0D0D0ACAAE4}</Project>
+      <Name>RF.Reporting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReportTemplates\AssetProfitReport.excel.xslt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

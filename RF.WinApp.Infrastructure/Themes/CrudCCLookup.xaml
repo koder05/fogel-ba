@@ -1,0 +1,360 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:Class="RF.WinApp.CrudCCLookup" x:ClassModifier="public"
+                    xmlns:vc="clr-namespace:RF.WinApp" 
+                    >
+
+    <vc:LookupFieldValueConverter x:Key="LookupFieldValueConverter" />
+    <vc:DataObjEnvelopeConverter x:Key="DataObjEnvelopeConverter" />
+
+    <Style x:Key="ColumnHeaderInLookup" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Height" Value="18"/>
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                    <ControlTemplate.Resources>
+                        <Style TargetType="{x:Type Thumb}">
+                            <Setter Property="FrameworkElement.Width" Value="1"/>
+                            <Setter Property="FrameworkElement.Cursor" Value="SizeWE"/>
+                            <Setter Property="Control.Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Thumb">
+                                        <Border Background="{TemplateBinding Background}" />
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Border Name="MainBorder" Style="{DynamicResource DataGridColumnHeader_MainBorderStyle}">
+                            <Grid>
+                                <ContentPresenter Margin="3" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" 
+                                                      ContentStringFormat="{TemplateBinding ContentStringFormat}" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                            </Grid>
+                        </Border>
+                        <Path Name="UpArrow" Style="{DynamicResource DataGridColumnHeader_SortPathStyle}">
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure StartPoint="0,0">
+                                        <LineSegment Point="7,0"/>
+                                        <LineSegment Point="3.5,6"/>
+                                        <LineSegment Point="0,0"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                        <Path Name="DownArrow" Style="{DynamicResource DataGridColumnHeader_SortPathStyle}">
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure StartPoint="0,6">
+                                        <LineSegment Point="7,6"/>
+                                        <LineSegment Point="3.5,0"/>
+                                        <LineSegment Point="0,6"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                        <Thumb Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Background="{DynamicResource DataGridColumnHeader_PART_LeftHeaderGripperColor}"/>
+                        <Thumb Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Background="{DynamicResource DataGridColumnHeader_PART_RightHeaderGripperColor}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="SortDirection" Value="Descending">
+                            <Setter TargetName="UpArrow" Property="Visibility" Value="Hidden"/>
+                            <Setter TargetName="DownArrow" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="SortDirection" Value="Ascending">
+                            <Setter TargetName="DownArrow" Property="Visibility" Value="Hidden"/>
+                            <Setter TargetName="UpArrow" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RowHeader" TargetType="{x:Type DataGridRowHeader}">
+        <Setter Property="Width" Value="0"/>
+        <Setter Property="Template" Value="{x:Null}" />
+    </Style>
+
+    <Style x:Key="CellInLookup" TargetType="{x:Type DataGridCell}">
+        <Setter Property="TextBlock.FontFamily" Value="Arial"/>
+        <Setter Property="TextBlock.FontSize" Value="10"/>
+        <Setter Property="TextBlock.TextTrimming" Value="CharacterEllipsis"/>
+        <Setter Property="TextBlock.Foreground" Value="Black"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="18"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <Border BorderThickness="{TemplateBinding Border.BorderThickness}" 
+                        BorderBrush="{TemplateBinding Border.BorderBrush}" 
+                        Background="{TemplateBinding Panel.Background}" SnapsToDevicePixels="True">
+                        <ContentPresenter VerticalAlignment="Center"
+                                  Content="{TemplateBinding ContentControl.Content}" 
+                                  Margin="1,0,0,0"
+                                  ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" 
+                                  ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}" 
+                                  SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="{DynamicResource SelectedItemListBrush}" />
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="BorderBrush" Value="Transparent" />
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Background" Value="{DynamicResource MouseOverListBrush}" />
+            </Trigger>
+            <DataTrigger Value="0" Binding="{Binding Path=ID}">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Foreground" Value="White"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ItemInLookup" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Margin" Value="0,0,0,0"/>
+        <Style.Triggers>
+            <Trigger Property="AlternationIndex" Value="0">
+                <Setter Property="Background" Value="White"/>
+            </Trigger>
+            <Trigger Property="AlternationIndex" Value="1">
+                <Setter Property="Background" Value="#EFF3EF"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#FAE9C4"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="{x:Type vc:CrudCC}" x:Key="LookupWithExtension">
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HeadersVisibility" Value="Column" />
+        <Setter Property="RowHeaderStyle" Value="{StaticResource RowHeader}"/>
+        <Setter Property="ColumnHeaderStyle" Value="{StaticResource ColumnHeaderInLookup}"/>
+        <Setter Property="CellStyle" Value="{StaticResource CellInLookup}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource ItemInLookup}"/>
+        <Setter Property="AlternationCount" Value="2"/>
+        <Setter Property="GridLinesVisibility" Value="Vertical"/>
+        <Setter Property="SelectionMode" Value="Extended" />
+        <Setter Property="ClipboardCopyMode" Value="ExcludeHeader" />
+        <Setter Property="VerticalGridLinesBrush" Value="#C6D7C5"/>
+        <Setter Property="SelectionUnit" Value="FullRow" />
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True"/>
+        <Setter Property="EnableColumnVirtualization" Value="False"/>
+        <Setter Property="EnableRowVirtualization" Value="True"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+        <Setter Property="Validation.ErrorTemplate" Value="{x:Null}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type vc:CrudCC}" x:Name="Crud">
+                    <Grid>
+                        <StackPanel>
+                            <vc:ActionTextBox x:Name="PART_LookupBox" 
+                                    Action="{x:Static vc:CrudCC.ToggleFormAction}"
+                                    HorizontalAlignment="Left"
+                                    Style="{DynamicResource TextBoxWithAdornedPopup2}"
+                                    Width="{Binding Path=(vc:CrudLookup.LookupWidth), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                    IsReadOnly="{TemplateBinding IsReadOnly}"
+                                    vc:AdornedPopup.IsShow="{Binding ElementName=aPopup, Path=(vc:AdornedPopup.IsShow), Mode=TwoWay}" 
+                                    Validation.ErrorTemplate="{DynamicResource Validation_ErrorTemplate}"
+                                    DataContext="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=SelectedModel, Mode=TwoWay}">
+                                <!--<TextBox.Text >
+                                        <vc:BcpBinding UpdateSourceTrigger="PropertyChanged" Path="SelectedModel" ElementName="TemplatedParent" Mode="TwoWay"
+                                       Converter="{StaticResource LookupFieldValueConverter}" ConverterParameters="Binding ElementName=TemplatedParent, ElementName=TemplatedParent Path=(vc:CrudLookup.LookupField)"  />
+                                        </TextBox.Text>-->
+                            </vc:ActionTextBox>
+                            <vc:AdornedPopup x:Name="aPopup" vc:AdornedPopup.IsShow="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(vc:AdornedPopup.IsShow), Mode=TwoWay}">
+                                <Border x:Name="calDatePopupBorder" Style="{DynamicResource DropDownPopupBorder}" Margin="0,1,0,0"
+                                            Width="Auto" MaxWidth="{TemplateBinding Width}" Height="Auto" MaxHeight="{TemplateBinding Height}">
+                                    <ScrollViewer x:Name="DG_ScrollViewer" Focusable="false">
+                                        <ScrollViewer.Template>
+                                            <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Button Command="{x:Static DataGrid.SelectAllCommand}" Focusable="false" Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}}" Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.All}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Width="{Binding CellsPanelHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                                    <DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter" Grid.Column="1" Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Column}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                                    <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" CanContentScroll="{TemplateBinding CanContentScroll}" Grid.ColumnSpan="2" Grid.Row="1" />
+                                                    <ScrollBar x:Name="PART_VerticalScrollBar" Grid.Column="2" Maximum="{TemplateBinding ScrollableHeight}" Orientation="Vertical" Grid.Row="1" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportHeight}"/>
+                                                    <Grid Grid.Column="1" Grid.Row="2">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Column="1" Maximum="{TemplateBinding ScrollableWidth}" Orientation="Horizontal" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportWidth}"/>
+                                                    </Grid>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </ScrollViewer.Template>
+                                        <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    </ScrollViewer>
+                                </Border>
+                            </vc:AdornedPopup>
+                        </StackPanel>
+                        <Canvas x:Name="Lookup_ppp">
+
+                            <vc:FormCC x:Name="PART_FormEditCC" Canvas.Top="26"
+                                          DataContext="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=SelectedModel, Converter={StaticResource DataObjEnvelopeConverter}}"
+                                          Width="{TemplateBinding FormEditBlockWidth}" Height="{TemplateBinding FormEditBlockHeight}" 
+                                          BlockCaption="Редактирование" ApplyCaption="Сохранить" ClearCaption="Сброс"
+                                          ModalScopeElement="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=2, AncestorType=vc:CrudCC}}"
+                                              >
+                                <vc:FormCC.Resources>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Template" Value="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type ButtonBase}, ResourceId=InThemeButtonBaseTemplate}}" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=IsEditing}" Value="True">
+                                                <Setter Property="Foreground" Value="Red"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </vc:FormCC.Resources>
+                                <ContentPresenter Content="{TemplateBinding FormEdit}" />
+                            </vc:FormCC>
+
+                            <vc:FormCC x:Name="PART_FormNewCC" Canvas.Top="26"
+                                          DataContext="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=SelectedModel, Converter={StaticResource DataObjEnvelopeConverter}, Mode=OneWayToSource}"
+                                          Width="{TemplateBinding FormNewBlockWidth}" Height="{TemplateBinding FormNewBlockHeight}" 
+                                          BlockCaption="Новая запись" ApplyCaption="Сохранить" ClearCaption="Сброс" 
+                                          ModalScopeElement="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=2, AncestorType=vc:CrudCC}}"      
+                                          >
+                                <vc:FormCC.Resources>
+                                    <Style TargetType="{x:Type Button}" >
+                                        <Setter Property="Template" Value="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type ButtonBase}, ResourceId=InThemeButtonBaseTemplate}}" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=IsEditing}" Value="True">
+                                                <Setter Property="Foreground" Value="Red"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </vc:FormCC.Resources>
+                                <ContentPresenter ContentSource="FormNew" />
+                            </vc:FormCC>
+
+                            <vc:FilterBlockCC x:Name="PART_FilterBlockCC">
+                                <ContentPresenter ContentSource="Filter" />
+                            </vc:FilterBlockCC>
+                        </Canvas>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsShow" Value="false" SourceName="aPopup">
+                            <Setter Property="vc:CrudCC.IsBindable" Value="False" />
+                        </Trigger>
+                        <Trigger Property="Validation.HasError" Value="True">
+                            <Setter TargetName="PART_LookupBox" Property="vc:AdornedPopup.Err" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(Validation.Errors)[0]}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type vc:CrudCC}" x:Key="Lookup">
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HeadersVisibility" Value="Column" />
+        <Setter Property="RowHeaderStyle" Value="{StaticResource RowHeader}"/>
+        <Setter Property="ColumnHeaderStyle" Value="{StaticResource ColumnHeaderInLookup}"/>
+        <Setter Property="CellStyle" Value="{StaticResource CellInLookup}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource ItemInLookup}"/>
+        <Setter Property="AlternationCount" Value="2"/>
+        <Setter Property="GridLinesVisibility" Value="Vertical"/>
+        <Setter Property="SelectionMode" Value="Extended" />
+        <Setter Property="ClipboardCopyMode" Value="ExcludeHeader" />
+        <Setter Property="VerticalGridLinesBrush" Value="#C6D7C5"/>
+        <Setter Property="SelectionUnit" Value="FullRow" />
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True"/>
+        <Setter Property="EnableColumnVirtualization" Value="False"/>
+        <Setter Property="EnableRowVirtualization" Value="True"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+        <Setter Property="Validation.ErrorTemplate" Value="{x:Null}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type vc:CrudCC}" x:Name="Crud">
+                    <Grid>
+                        <StackPanel>
+                            <TextBox x:Name="PART_LookupBox" 
+                                    HorizontalAlignment="Left"
+                                    Style="{DynamicResource TextBoxWithAdornedPopup}"
+                                    Width="{Binding Path=(vc:CrudLookup.LookupWidth), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                    IsReadOnly="{TemplateBinding IsReadOnly}"
+                                    vc:AdornedPopup.IsShow="{Binding ElementName=aPopup, Path=(vc:AdornedPopup.IsShow), Mode=TwoWay}" 
+                                    Validation.ErrorTemplate="{DynamicResource Validation_ErrorTemplate}"
+                                    DataContext="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=SelectedModel, Mode=TwoWay}" />
+                            <vc:AdornedPopup x:Name="aPopup" vc:AdornedPopup.IsShow="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(vc:AdornedPopup.IsShow), Mode=TwoWay}">
+                                <Border x:Name="calDatePopupBorder" Style="{DynamicResource DropDownPopupBorder}" Margin="0,1,0,0"
+                                            Width="Auto" MaxWidth="{TemplateBinding Width}" Height="Auto" MaxHeight="{TemplateBinding Height}">
+                                    <ScrollViewer x:Name="DG_ScrollViewer" Focusable="false">
+                                        <ScrollViewer.Template>
+                                            <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Button Command="{x:Static DataGrid.SelectAllCommand}" Focusable="false" Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}}" Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.All}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Width="{Binding CellsPanelHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                                    <DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter" Grid.Column="1" Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Column}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                                    <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" CanContentScroll="{TemplateBinding CanContentScroll}" Grid.ColumnSpan="2" Grid.Row="1" />
+                                                    <ScrollBar x:Name="PART_VerticalScrollBar" Grid.Column="2" Maximum="{TemplateBinding ScrollableHeight}" Orientation="Vertical" Grid.Row="1" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportHeight}"/>
+                                                    <Grid Grid.Column="1" Grid.Row="2">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Column="1" Maximum="{TemplateBinding ScrollableWidth}" Orientation="Horizontal" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportWidth}"/>
+                                                    </Grid>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </ScrollViewer.Template>
+                                        <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    </ScrollViewer>
+                                </Border>
+                            </vc:AdornedPopup>
+                        </StackPanel>
+                        <vc:FilterBlockCC x:Name="PART_FilterBlockCC">
+                            <ContentPresenter />
+                        </vc:FilterBlockCC>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsShow" Value="false" SourceName="aPopup">
+                            <Setter Property="vc:CrudCC.IsBindable" Value="False" />
+                        </Trigger>
+                        <Trigger Property="Validation.HasError" Value="True">
+                            <Setter TargetName="PART_LookupBox" Property="vc:AdornedPopup.Err" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(Validation.Errors)[0]}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
+<!--<TextBox.Text>
+    <MultiBinding Converter="{StaticResource LookupFieldValueConverter}" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+        <Binding Path="SelectedModel" Mode="TwoWay" RelativeSource="{RelativeSource TemplatedParent}" UpdateSourceTrigger="PropertyChanged" />
+        <Binding Path="LookupField" Mode="OneWay" RelativeSource="{RelativeSource TemplatedParent}" />
+    </MultiBinding>
+</TextBox.Text>-->    

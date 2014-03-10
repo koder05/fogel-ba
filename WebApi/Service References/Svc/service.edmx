@@ -1,0 +1,67 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="RF.BL.Model" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="WorkCalendar">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Comment" Type="Edm.String" />
+        <Property Name="IsWorkingDay" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Date" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+      </EntityType>
+      <EntityType Name="Governor">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Company" Type="RF.BL.Model.Company" Nullable="false" />
+        <Property Name="CompanyId" Type="Edm.Guid" Nullable="false" />
+        <Property Name="ShortName" Type="Edm.String" Nullable="false" />
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+      </EntityType>
+      <ComplexType Name="Company">
+        <Property Name="lawFormValue" Type="Edm.Byte" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+      </ComplexType>
+      <EntityType Name="AssetValue">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="InsuranceTypeValue" Type="Edm.Byte" Nullable="false" />
+        <Property Name="TakingDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="Value" Type="Edm.Decimal" Nullable="false" />
+        <Property Name="CashFlow" Type="Edm.Decimal" Nullable="false" />
+        <Property Name="GovernorId" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <NavigationProperty Name="Governor" Relationship="RF.BL.Model.RF_BL_Model_AssetValue_Governor_RF_BL_Model_Governor_GovernorPartner" ToRole="Governor" FromRole="GovernorPartner" />
+      </EntityType>
+      <Association Name="RF_BL_Model_AssetValue_Governor_RF_BL_Model_Governor_GovernorPartner">
+        <End Type="RF.BL.Model.Governor" Role="Governor" Multiplicity="1" />
+        <End Type="RF.BL.Model.AssetValue" Role="GovernorPartner" Multiplicity="0..1" />
+      </Association>
+    </Schema>
+    <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="WebApiCtx" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Holidays" EntityType="RF.BL.Model.WorkCalendar" />
+        <EntitySet Name="Governors" EntityType="RF.BL.Model.Governor" />
+        <EntitySet Name="Assets" EntityType="RF.BL.Model.AssetValue" />
+        <FunctionImport Name="Report" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(RF.BL.Model.AssetValue)" Nullable="false" />
+          <Parameter Name="DateBegin" Type="Edm.DateTime" Nullable="false" />
+          <Parameter Name="DateEnd" Type="Edm.DateTime" Nullable="false" />
+          <Parameter Name="InsuranceType" Type="Edm.Byte" Nullable="false" />
+          <Parameter Name="GovernorId" Type="Edm.Guid" />
+        </FunctionImport>
+        <FunctionImport Name="CreateBatch" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(RF.BL.Model.AssetValue)" Nullable="false" />
+          <Parameter Name="Values" Type="Collection(Edm.String)" Nullable="false" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <AssociationSet Name="RF_BL_Model_AssetValue_Governor_RF_BL_Model_Governor_GovernorPartnerSet" Association="RF.BL.Model.RF_BL_Model_AssetValue_Governor_RF_BL_Model_Governor_GovernorPartner">
+          <End Role="GovernorPartner" EntitySet="Assets" />
+          <End Role="Governor" EntitySet="Governors" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

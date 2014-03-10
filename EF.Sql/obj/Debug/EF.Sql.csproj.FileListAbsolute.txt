@@ -1,0 +1,13 @@
+D:\Projects\RF.WinApp\EF.Sql\bin\Debug\EF.Sql.dll
+D:\Projects\RF.WinApp\EF.Sql\bin\Debug\EF.Sql.pdb
+D:\Projects\RF.WinApp\EF.Sql\bin\Debug\EF.dll
+D:\Projects\RF.WinApp\EF.Sql\bin\Debug\EntityFramework.dll
+D:\Projects\RF.WinApp\EF.Sql\bin\Debug\RF.LinqExt.dll
+D:\Projects\RF.WinApp\EF.Sql\bin\Debug\RF.Common.dll
+D:\Projects\RF.WinApp\EF.Sql\bin\Debug\EF.pdb
+D:\Projects\RF.WinApp\EF.Sql\bin\Debug\RF.LinqExt.pdb
+D:\Projects\RF.WinApp\EF.Sql\bin\Debug\EntityFramework.xml
+D:\Projects\RF.WinApp\EF.Sql\bin\Debug\RF.Common.pdb
+D:\Projects\RF.WinApp\EF.Sql\obj\Debug\EF.Sql.dll
+D:\Projects\RF.WinApp\EF.Sql\obj\Debug\EF.Sql.pdb
+D:\Projects\RF.WinApp\EF.Sql\obj\Debug\EF.Sql.csprojResolveAssemblyReference.cache

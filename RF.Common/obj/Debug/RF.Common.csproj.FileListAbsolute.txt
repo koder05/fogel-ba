@@ -1,0 +1,15 @@
+C:\FundOnLine\RF.Common\bin\Debug\RF.Common.dll
+C:\FundOnLine\RF.Common\bin\Debug\RF.Common.pdb
+C:\FundOnLine\RF.Common\obj\Debug\ResolveAssemblyReference.cache
+C:\FundOnLine\RF.Common\obj\Debug\RF.Common.dll
+C:\FundOnLine\RF.Common\obj\Debug\RF.Common.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Common\bin\Debug\RF.Common.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Common\bin\Debug\RF.Common.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Common\obj\Debug\RF.Common.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\RF.Common\obj\Debug\RF.Common.pdb
+D:\Projects\RF.WebApp\RF.Common\bin\Debug\RF.Common.dll
+D:\Projects\RF.WebApp\RF.Common\bin\Debug\RF.Common.pdb
+D:\Projects\RF.WebApp\RF.Common\obj\Debug\RF.Common.dll
+D:\Projects\RF.WebApp\RF.Common\obj\Debug\RF.Common.pdb
+D:\Projects\RF.WebApp\RF.Common\obj\Debug\RF.Common.csprojResolveAssemblyReference.cache

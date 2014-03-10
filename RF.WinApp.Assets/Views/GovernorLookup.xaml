@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="RF.WinApp.GovernorLookup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:vc="clr-namespace:RF.WinApp;assembly=RF.WinApp.Infrastructure" 
+             xmlns:vc2="clr-namespace:RF.WinApp" 
+             xmlns:uc="clr-namespace:RF.WinApp.UC;assembly=RF.WinApp.Infrastructure">
+    <vc:CrudCC x:Name="TemplatedCrudCC" DataViewProvider="vc2:GovernorDataViewProvider" vc:CrudLookup.LookupField="ShortName" 
+               Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=Height}"
+               Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=Width}"
+               IsReadOnly="False" 
+               FormEditBlockWidth="400" FormEditBlockHeight="200"
+               >
+        <vc:CrudCC.Resources>
+            <Canvas x:Shared="False" x:Key="frm" Width="400">
+                <Label Content="Краткое наименование" Height="18" Width="120" Canvas.Top="10" Padding="0" />
+                <Label Content="Наименование УК" Height="18" Width="120" Canvas.Top="40" Padding="0" />
+                <Label Content="Юр. форма УК" Height="18" Width="120" Canvas.Top="70" Padding="0" />
+                <Canvas Canvas.Left="125">
+                    <TextBox Canvas.Top="10" Validation.ErrorTemplate="{DynamicResource Validation_ErrorTemplate}" Width="200">
+                        <TextBox.Text>
+                            <Binding Path="Model.ShortName" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" NotifyOnSourceUpdated="True" NotifyOnValidationError="True" >
+                                <Binding.ValidationRules>
+                                    <vc:DataAnnotationsValidationRule ValidationStep="CommittedValue" />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                    <TextBox Canvas.Top="40" Width="250" Validation.ErrorTemplate="{DynamicResource Validation_ErrorTemplate}">
+                        <TextBox.Text>
+                            <Binding Path="Model.Company.Name" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" NotifyOnSourceUpdated="True" NotifyOnValidationError="True" >
+                                <Binding.ValidationRules>
+                                    <vc:DataAnnotationsValidationRule ValidationStep="CommittedValue" />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                    <ComboBox SelectedValue="{Binding Path=Model.Company.LawForm, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="70" Width="110"
+                          DisplayMemberPath="Name" SelectedValuePath="Value" ItemsSource="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=LawForms}" />
+                </Canvas>
+            </Canvas>
+        </vc:CrudCC.Resources>
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Короткое имя" Binding="{Binding Path=Model.ShortName}" Width="150" />
+            <DataGridTextColumn Header="Управляющая компания" Binding="{Binding Path=Model.Company.FullName}" Width="150" />
+        </DataGrid.Columns>
+        <vc:CrudCC.FormEdit>
+            <ContentControl Content="{StaticResource frm}" />
+        </vc:CrudCC.FormEdit>
+        <vc:CrudCC.FormNew>
+            <ContentControl Content="{StaticResource frm}" />
+        </vc:CrudCC.FormNew>        
+    </vc:CrudCC>
+</UserControl>

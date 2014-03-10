@@ -1,0 +1,16 @@
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\EF\bin\Debug\EF.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\EF\bin\Debug\EF.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\EF\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\EF\obj\Debug\EF.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\EF\obj\Debug\EF.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\EF\bin\Debug\RF.Common.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\EF\bin\Debug\RF.Common.pdb
+D:\Projects\RF.WebApp\EF\bin\Debug\EF.dll
+D:\Projects\RF.WebApp\EF\bin\Debug\EF.pdb
+D:\Projects\RF.WebApp\EF\bin\Debug\EntityFramework.dll
+D:\Projects\RF.WebApp\EF\bin\Debug\RF.Common.dll
+D:\Projects\RF.WebApp\EF\bin\Debug\RF.Common.pdb
+D:\Projects\RF.WebApp\EF\bin\Debug\EntityFramework.xml
+D:\Projects\RF.WebApp\EF\obj\Debug\EF.dll
+D:\Projects\RF.WebApp\EF\obj\Debug\EF.pdb
+D:\Projects\RF.WebApp\EF\obj\Debug\EF.csprojResolveAssemblyReference.cache

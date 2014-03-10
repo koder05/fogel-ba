@@ -1,0 +1,7 @@
+D:\Projects\RF.WinApp\RF.Reporting\bin\Release\RF.Reporting.dll
+D:\Projects\RF.WinApp\RF.Reporting\bin\Release\RF.Reporting.pdb
+D:\Projects\RF.WinApp\RF.Reporting\bin\Release\RF.Common.dll
+D:\Projects\RF.WinApp\RF.Reporting\bin\Release\RF.Common.pdb
+D:\Projects\RF.WinApp\RF.Reporting\obj\Release\RF.Reporting.dll
+D:\Projects\RF.WinApp\RF.Reporting\obj\Release\RF.Reporting.pdb
+D:\Projects\RF.WinApp\RF.Reporting\obj\Release\RF.Reporting.csprojResolveAssemblyReference.cache

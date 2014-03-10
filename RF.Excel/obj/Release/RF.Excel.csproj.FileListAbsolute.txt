@@ -1,0 +1,4 @@
+D:\Projects\RF.WinApp\RF.Excel\bin\Release\RF.Excel.dll
+D:\Projects\RF.WinApp\RF.Excel\bin\Release\RF.Excel.pdb
+D:\Projects\RF.WinApp\RF.Excel\obj\Release\RF.Excel.dll
+D:\Projects\RF.WinApp\RF.Excel\obj\Release\RF.Excel.pdb

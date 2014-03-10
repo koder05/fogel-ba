@@ -1,0 +1,15 @@
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.Assets.BL.dll
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.Assets.BL.pdb
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.Bl.dll
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.LinqExt.dll
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.Common.dll
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.Bl.pdb
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.LinqExt.pdb
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.Common.pdb
+D:\Projects\RF.WinApp\RF.Assets.BL\obj\Debug\RF.Assets.BL.dll
+D:\Projects\RF.WinApp\RF.Assets.BL\obj\Debug\RF.Assets.BL.pdb
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.Reporting.dll
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.Reporting.pdb
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.Excel.dll
+D:\Projects\RF.WinApp\RF.Assets.BL\bin\Debug\RF.Excel.pdb
+D:\Projects\RF.WinApp\RF.Assets.BL\obj\Debug\RF.Assets.BL.csprojResolveAssemblyReference.cache

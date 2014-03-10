@@ -1,0 +1,42 @@
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\Ms.Unity.2.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\Ms.Unity.2.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\obj\Debug\Ms.Unity.2.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\obj\Debug\Ms.Unity.2.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\IoC.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\Mvc3\Ms.Unity.2\bin\Debug\IoC.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Ms.Unity.2.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Ms.Unity.2.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\RF.Common.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\RF.Common.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\obj\Debug\Ms.Unity.2.dll
+C:\Documents and Settings\ivanov\Мои документы\Visual Studio 2008\Projects\RF.WebApp\Ms.Unity.2\obj\Debug\Ms.Unity.2.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Ms.Unity.2.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Ms.Unity.2.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\RF.Common.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\RF.Common.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\Projects\RF.WebApp\Ms.Unity.2\obj\Debug\Ms.Unity.2.dll
+D:\Projects\RF.WebApp\Ms.Unity.2\obj\Debug\Ms.Unity.2.pdb
+D:\Projects\RF.WebApp\Ms.Unity.2\obj\Debug\Ms.Unity.2.csprojResolveAssemblyReference.cache

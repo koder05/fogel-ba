@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="RF.WinApp.UC.DateInputUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:vc="clr-namespace:RF.WinApp"
+             xmlns:uc="clr-namespace:RF.WinApp.UC"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:s="clr-namespace:System;assembly=mscorlib"
+             >
+    <UserControl.Resources>
+        <uc:Date2StringConverter x:Key="Date2StringConverter"/>
+    </UserControl.Resources>
+    <StackPanel x:Name="UC">
+        <xctk:MaskedTextBox x:Name="mdpDate" Mask="00/00/0000" ValueDataType="{x:Type s:String}" Width="100" Style="{DynamicResource TextBoxWithAdornedPopup}"
+            vc:AdornedPopup.IsShow="{Binding ElementName=aPopup, Path=(vc:AdornedPopup.IsShow), Mode=TwoWay}"                 
+            vc:AdornedPopup.IsKeeperElement="true"                            
+            Value="{Binding ElementName=calDate, Path=SelectedDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource Date2StringConverter}}" />
+        <vc:AdornedPopup x:Name="aPopup" Margin="0,2,0,0">
+                <Border x:Name="calDatePopupBorder" Style="{DynamicResource DropDownPopupBorder}">
+                    <Calendar x:Name="calDate" SelectionMode="SingleDate" SelectedDatesChanged="calDate_SelectedDatesChanged" 
+                    SelectedDate="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DateValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"      
+                          />
+                </Border>
+        </vc:AdornedPopup>
+    </StackPanel>
+</UserControl>
+<!--DisplayDate="{Binding RelativeSource={RelativeSource Mode=Self}, Path=SelectedDate, Converter={StaticResource Nullabledate2DateConverter}}"-->
+<!--Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=uc:DateInputUC}, Path=DateValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource Date2StringConverter}}"-->
+<!--Value="{Binding ElementName=calDate, Path=SelectedDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource Date2StringConverter}}"-->           

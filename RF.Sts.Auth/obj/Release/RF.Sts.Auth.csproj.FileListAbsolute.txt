@@ -1,0 +1,12 @@
+D:\Projects\RF.WinApp\RF.Sts.Auth\bin\Release\RF.Sts.Auth.dll
+D:\Projects\RF.WinApp\RF.Sts.Auth\bin\Release\RF.Sts.Auth.pdb
+D:\Projects\RF.WinApp\RF.Sts.Auth\bin\Release\Microsoft.IdentityModel.Protocols.OAuth.dll
+D:\Projects\RF.WinApp\RF.Sts.Auth\bin\Release\Newtonsoft.Json.dll
+D:\Projects\RF.WinApp\RF.Sts.Auth\bin\Release\RF.Common.dll
+D:\Projects\RF.WinApp\RF.Sts.Auth\bin\Release\System.Net.Http.dll
+D:\Projects\RF.WinApp\RF.Sts.Auth\bin\Release\RF.Common.pdb
+D:\Projects\RF.WinApp\RF.Sts.Auth\bin\Release\Newtonsoft.Json.xml
+D:\Projects\RF.WinApp\RF.Sts.Auth\bin\Release\System.Net.Http.xml
+D:\Projects\RF.WinApp\RF.Sts.Auth\obj\Release\RF.Sts.Auth.dll
+D:\Projects\RF.WinApp\RF.Sts.Auth\obj\Release\RF.Sts.Auth.pdb
+D:\Projects\RF.WinApp\RF.Sts.Auth\obj\Release\RF.Sts.Auth.csprojResolveAssemblyReference.cache
